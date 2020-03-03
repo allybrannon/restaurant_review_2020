@@ -1,5 +1,7 @@
 # Restaurant Queries
 
+- List all restaurants.
+- List a single restaurant by ID.
 - List all the reviews for a given restaurant given a specific restaurant ID.
 - List all the reviews for a given restaurant, given a specific restaurant name.
 - List all the reviews for a given reviewer, given a specific author name.
