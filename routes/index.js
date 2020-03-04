@@ -37,4 +37,17 @@ router.get('/:r_id', async function(req, res, next) {
   });
 });
 
+router.post('/', async function(req, res) {
+  const { restaurant_id, review_title, review_text } = req.body;
+  const idAsInt = parseInt(restaurant_id);
+
+  const postData = await restaurantModel.addReview(
+    idAsInt,
+    review_title,
+    review_text
+  );
+  console.log(postData);
+  res.sendStatus(200);
+});
+
 module.exports = router;
