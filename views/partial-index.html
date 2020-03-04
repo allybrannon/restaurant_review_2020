@@ -1,2 +1,3 @@
-<p>This is the index partial</p>
-${data.map(entry => `<p>${entry.name}</p>`).join('')}
+<ul>
+    ${data.map(entry => `<li><a href="/${entry.id}">${entry.name}</a></li>`).join('')}
+</ul>

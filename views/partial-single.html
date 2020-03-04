@@ -1,0 +1,17 @@
+${data.map(restaurant => {
+    return `
+        <p>Food Type: ${restaurant.category}</p>
+        <p>${restaurant.stars} Stars</p>
+    `
+}).join('')}
+
+<h2>REVIEWS</h2>
+<hr/>
+${reviewList.map(review => {
+    return `
+        <h3>${review.title}</h3>
+        <p>${review.review}</p>
+    `
+}).join('')}
+
+<a href="/">Return to Homepage</a>

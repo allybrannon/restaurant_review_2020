@@ -30,6 +30,30 @@ class RestaurantModel {
       return error;
     }
   }
+
+  static async getRestaurantById(r_id) {
+    try {
+      const response = await db.any(
+        `SELECT * FROM restaurant WHERE id = ${r_id};`
+      );
+      return response;
+    } catch (error) {
+      console.error('ERROR: ', error);
+      return error;
+    }
+  }
+
+  static async getReviewsByRestaurantId(r_id) {
+    try {
+      const response = await db.any(
+        `SELECT * FROM review WHERE restaurant_id = ${r_id};`
+      );
+      return response;
+    } catch (error) {
+      console.error('ERROR: ', error);
+      return error;
+    }
+  }
 }
 
 module.exports = RestaurantModel;
